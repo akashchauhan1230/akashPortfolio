@@ -1,0 +1,564 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akash Chauhan- Web Developer</title>
+
+  <!-- Custom CSS Link -->
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+
+  <!-- Google font link -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+    rel="stylesheet" />
+    <!-- Font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <!-- Main Container -->
+  <div class="container">
+
+    <!-- nav for mobile -->
+    <nav class="nav-mobile">
+      <div class="navbar-brand">
+        <img src="{% static 'images/1000166232.jpg' %}" alt="" class="brand-img">
+        <h1 class="brand-name">Akash Chauhan</h1>
+      </div>
+
+ <!-- <ion-icon name="menu-outline" class="menu-toggler"></ion-icon> -->
+  <div class="menu-toggler" style="display:flex; align-items: center; justify-content: center;"  name="menu-outline"><i class="fa-solid fa-bars" id="tick"></i>
+  <i class="fa-solid fa-xmark" id="cross" style="display: none;"></i></div>
+    </nav>
+
+
+    <!-- sidebar structure -->
+    <div class="side-bar">
+
+      <img src="{% static 'images/akashprofile.jpeg' %}" alt="" class="brand-img rounded-img">
+      <h1 class="brand-name">Akash <br> Chauhan</h1>
+
+      <!-- navbar -->
+
+      <nav>
+        <ul class="nav">
+          <li><a href="#about" class="nav-link active">About</a></li>
+          <li><a href="#resume" class="nav-link">Resume</a></li>
+          <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+          <li><a href="#blog" class="nav-link">Blog</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- social link -->
+
+      <div class="social-btn-groups">
+        <a href="https://github.com/akashchauhan1230" class="btn">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://x.com/AkashChauh12452?t=OSFrsDGn8EsiH-3Cjuq_bg&s=09" class="btn">
+          <i class="fa-brands fa-square-x-twitter"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/akash-chauhan-762319357" class="btn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+      </div>
+
+      <!-- sidebar footer -->
+      <footer class="side-bar-footer">
+        <p class="copyright">&copy; 2025 All rights<br>reserved.</p>
+      </footer>
+
+    </div>
+
+    <!-- about section structure -->
+    <section id="about" class="about page active">
+{% if messages %}
+        {% for m in messages %}
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            {{ m }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+        {% endfor %}
+        {% endif %}
+      <!-- about section hero structure -->
+      <div class="hero">
+        <div class="hero-img-bx">
+          <img  src="{% static 'images/akashprofile.jpeg' %}" alt="">
+        </div>
+
+        <div class="hero-content">
+          <div class="hero-content-wrapper">
+            <p class="title">Web Developer</p>
+            <h1 class="name">Akash</h1>
+            <div class="desc">
+              <p>I'm a passionate web developer specializing in creating modern, responsive, and user-friendly websites.
+                With expertise in HTML, CSS, and JavaScript, I craft seamless web experiences that bring ideas to life.
+              </p>
+
+              <p>Whether you're looking for a custom-built website or want to enhance your existing platform, I'm here
+                to help. Let's collaborate and build something amazing together!</p>
+            </div>
+
+            <a href="{% static 'images/cv.jpg' %}" download class="btn-primary">Download CV</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- about section service structure -->
+      <div class="about-inner">
+        <div class="service">
+
+          <h2>What I Do</h2>
+
+          <div class="grid-item">
+
+            <div class="item">
+              <div class="item-icon">
+                <ion-icon name="storefront-outline"></ion-icon>
+              </div>
+              <div class="item-wrapper">
+                <h3>Frontend Developer</h3>
+                <p>As a frontend developer, I bring designs to life by crafting visually appealing and user-friendly interfaces. With a passion for creating seamless user experiences, I focus on writing clean, efficient, and well-documented code.</p>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="item-icon">
+                <ion-icon name="reader-outline"></ion-icon>
+              </div>
+              <div class="item-wrapper">
+                <h3>Backend Developer</h3>
+                <p>As a backend developer, I focus on building robust, scalable, and efficient server-side solutions that power applications and drive business results. With a strong foundation in programming languages and technologies, I design and implement backend systems that are secure, reliable, and high-performing.</p>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="item-icon">
+                <ion-icon name="desktop-outline"></ion-icon>
+              </div>
+              <div class="item-wrapper">
+                <h3>Web Designer</h3>
+                <p>As a web designer, I craft visually appealing and user-friendly websites that effectively communicate a brand's message and values. With a passion for design and a keen eye for detail, I create websites that are both aesthetically pleasing and functional.</p>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="item-icon">
+                <ion-icon name="file-tray-stacked-outline"></ion-icon>
+              </div>
+              <div class="item-wrapper">
+                <h3>Full Stack Web Developer</h3>
+                <p>As a full stack developer, I have expertise in both frontend and backend development, allowing me to handle all aspects of web development. With a passion for building robust, scalable, and efficient web applications, I work on both the client-side and server-side to deliver high-quality solutions.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- about section testimonials structure -->
+
+
+
+      </div>
+
+
+    </section>
+
+
+    <!-- resume section structure -->
+
+    <section id="resume" class="resume page">
+
+      <h1 class="section-heading">Resume</h1>
+      <h4 class="section-sub-heading">3 months of Experience</h4>
+
+
+      <div class="resume-row">
+        <div class="wrapper">
+
+
+          <!-- education structure -->
+
+          <div class="edu">
+            <h2>Education</h2>
+
+            <div class="grid-item">
+              <h4 class="year">2020</h4>
+              <h4 class="edu-name">Intermediate</h4>
+              <p class="company">SMT AMARI DEVI I C Chhattarpur Kushahal Azamgarh</p>
+              <p class="edu-desc">I'm studying physics, chemistry, and mathematics, which are essential for understanding the natural world and developing problem-solving skills</p>
+
+              <div class="divider"></div>
+            </div>
+
+            <div class="grid-item">
+              <h4 class="year">2022-Cureent</h4>
+              <h4 class="edu-name">Bacholor Of Technology</h4>
+              <p class="company">Rameshwaram Institute Of Technology & Management</p>
+              <p class="edu-desc">
+As a B.Tech CSE student, I've gained a strong foundation in computer science and engineering principles, including programming, algorithms, data structures, computer architecture, and software engineering. This degree has equipped me with the knowledge and skills to design, develop, and deploy software systems and applications.</p>
+
+              <div class="divider"></div>
+            </div>
+
+
+
+          </div>
+
+
+
+
+          <!-- experience structure -->
+
+          <div class="exp">
+            <h2>Projects</h2>
+
+            <div class="grid-item">
+              <h4 class="year">2025</h4>
+              <h4 class="exp-name">SmartBuildHub</h4>
+              <p class="company">Softpro India</p>
+              <p class="exp-desc">Praesent dignissim sollicitudin justo, sed elementum quam lacinia quis. Phasellus
+                eleifend tristique posuere. Sed vitae
+                dui nec magna.</p>
+
+              <div class="divider"></div>
+            </div>
+
+            <div class="grid-item">
+              <h4 class="year">2025</h4>
+              <h4 class="exp-name">Online Book Store</h4>
+              <p class="company">Softpro India</p>
+              <p class="exp-desc">The Online Book Store System is a comprehensive digital platform designed to transform the conventional book-selling experience into a streamlined, accessible, and user-friendly process.</p>
+
+              <div class="divider"></div>
+            </div>
+
+            <div class="grid-item">
+              <h4 class="year">2023</h4>
+              <h4 class="exp-name">Campus Navigation System</h4>
+              <p class="company">Rameshwaram Institute of Technology & Management</p>
+              <p class="exp-desc">Our projects motive is that new visitors easily can navigate the complex campus like
+                Hospitals, Universities and other government organizations etc.
+</p>
+
+              <div class="divider"></div>
+            </div>
+
+
+
+          </div>
+
+
+        </div>
+
+
+        <div class="wrapper">
+
+          <!-- design skill structure -->
+
+          <div class="design-skill">
+            <h2>Design Skills</h2>
+
+            <div class="progress-detail">
+              <div class="progress-name">Web Design</div>
+              <div class="progress-percent">95%</div>
+            </div>
+            <div class="progress-bar">
+              <div class="progress" style="width: 95%"></div>
+            </div>
+
+            
+
+            {% comment %} <div class="progress-detail">
+              <div class="progress-name">Logo Design</div>
+              <div class="progress-percent">80%</div>
+            </div>
+            <div class="progress-bar">
+              <div class="progress" style="width: 80%"></div>
+            </div>
+
+            <div class="progress-detail">
+              <div class="progress-name">Graphics Design</div>
+              <div class="progress-percent">90%</div>
+            </div>
+            <div class="progress-bar">
+              <div class="progress" style="width: 90%"></div>
+            </div> {% endcomment %}
+
+          </div>
+
+
+          <!-- coding skill structure -->
+
+          <div class="coding-skill">
+            <h2 style="margin-top: 340px;">Technical Skills</h2>
+
+            <div class="progress-detail">
+              <div class="progress-name">Djnago</div>
+              <div class="progress-percent">75%</div>
+            </div>
+            <div class="progress-bar">
+              <div class="progress" style="width: 75%"></div>
+            </div>
+
+            <div class="progress-detail">
+              <div class="progress-name">SQLite</div>
+              <div class="progress-percent">70%</div>
+            </div>
+            <div class="progress-bar">
+              <div class="progress" style="width: 70%"></div>
+            </div>
+
+            <div class="progress-detail">
+              <div class="progress-name">Python</div>
+              <div class="progress-percent">80%</div>
+            </div>
+            <div class="progress-bar">
+              <div class="progress" style="width: 80%"></div>
+            </div>
+
+            <div class="progress-detail">
+              <div class="progress-name">JavaScript</div>
+              <div class="progress-percent">70%</div>
+            </div>
+            <div class="progress-bar">
+              <div class="progress" style="width: 70%"></div>
+            </div>
+
+            <div class="progress-detail">
+              <div class="progress-name">HTML/CSS</div>
+              <div class="progress-percent">95%</div>
+            </div>
+            <div class="progress-bar">
+              <div class="progress" style="width: 95%"></div>
+            </div>
+
+            <div class="progress-detail">
+              <div class="progress-name">Bootstrap</div>
+              <div class="progress-percent">95%</div>
+            </div>
+            <div class="progress-bar">
+              <div class="progress" style="width: 95%"></div>
+            </div>
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+      <a href="{% static 'images/cv.jpg' %}" download  class="btn-primary">Download CV</a>
+
+
+    </section>
+
+    <!-- portfolio section structure -->
+    <section id="portfolio" class="portfolio page">
+      <h1 class="section-heading">Portfolio</h1>
+      <h4 class="section-sub-heading">My Works</h4>
+
+      <ul class="filter-box">
+        <li class="filter-item active">All</li>
+        <li class="filter-item">SmartBuildHub</li>
+        <li class="filter-item">Online Book Store</li>
+        <li class="filter-item">Campus Navigation System</li>
+      </ul>
+
+
+      <div class="portfolio-items-group">
+
+        <div class="portfolio-item active">
+          <img src="{% static 'images/sbh.jpg' %}" alt="" class="item-img">
+          <h4 class="item-name">SmartBuildHub</h4>
+          <div class="item-icon">
+            <ion-icon name="home"></ion-icon>
+          </div>
+          <div class="item-category">SmartBuildHub</div>
+        </div>
+
+        <div class="portfolio-item active">
+          <img src="{% static 'images/book.jpg' %}" alt="" class="item-img">
+          <h4 class="item-name">Online Book Store</h4>
+          <div class="item-icon">
+            <ion-icon name="book"></ion-icon>
+          </div>
+          <div class="item-category">Online Book Store</div>
+        </div>
+
+        <div class="portfolio-item active">
+          <img src="{% static 'images/sns.gif' %}" alt="" class="item-img">
+          <h4 class="item-name">Campus Navigation System</h4>
+          <div class="item-icon">
+            <ion-icon name="videocam"></ion-icon>
+          </div>
+          <div class="item-category" ><a href="#" style="color:black;">View Project</a></div>
+        </div>
+
+
+
+      </div>
+
+    </section>
+
+
+    <!-- blog section structure -->
+    <section id="blog" class="blog page">
+      <h1 class="section-heading">Blog</h1>
+      <h4 class="section-sub-heading">My Diary</h4>
+
+      <div class="blog-container">
+
+        <div class="blog-post">
+          <div class="blog-img-box">
+            <img src="{% static 'images/fed.jpg' %}" alt="">
+          </div>
+          <div class="blog-category">Frontend Development</div>
+          <div class="blog-info">
+            <p class="publish-date">02 Mar 2025</p>
+            <a href="#" class="blog-title">I completed online course 'Introduction to Frontend Development' From Simplilearn</a>
+          </div>
+        </div>
+
+        <div class="blog-post">
+          <div class="blog-img-box">
+            <img src="{% static 'images/css.jpg' %}" alt="">
+          </div>
+          <div class="blog-category">Responsive css</div>
+          <div class="blog-info">
+            <p class="publish-date">15 Mar 2025</p>
+            <a href="#" class="blog-title">I had attend 3 days bootcamp on 'Responsive CSS' on Codekaro</a>
+          </div>
+        </div>
+
+        <div class="blog-post">
+          <div class="blog-img-box">
+            <img src="{% static 'images/django.jpg' %}" alt="">
+          </div>
+          <div class="blog-category">Python with Django</div>
+          <div class="blog-info">
+            <p class="publish-date">06 May 2025</p>
+            <a href="#" class="blog-title"> I have done Industrial Training on 'Python with Djnago' from Softpro India</a>
+          </div>
+        </div>
+
+        <div class="blog-post">
+          <div class="blog-img-box">
+            <img src="{% static 'images/AI.jpg' %}" alt="">
+          </div>
+          <div class="blog-category">Generative AI</div>
+          <div class="blog-info">
+            <p class="publish-date">22 Aug 2025</p>
+            <a href="#" class="blog-title">Oracle Cloud Infrastructure 2025 certified Generative AI Professional</a>
+          </div>
+        </div>
+
+        <div class="blog-post">
+          <div class="blog-img-box">
+            <img src="{% static 'images/blog_post_6.jpg' %}" alt="">
+          </div>
+          <div class="blog-category">UI</div>
+          <div class="blog-info">
+            <p class="publish-date">06 Apr 2021</p>
+            <a href="#" class="blog-title">Creative and Innovative Navigation Designs</a>
+          </div>
+        </div>
+
+        <div class="blog-post">
+          <div class="blog-img-box">
+            <img src="{% static 'images/blog_post_1.jpg' %}%}" alt="">
+          </div>
+          <div class="blog-category">Design</div>
+          <div class="blog-info">
+            <p class="publish-date">06 Apr 2021</p>
+            <a href="#" class="blog-title">6 Easy Steps to Better Icon Design</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- contact section structure -->
+    <section id="contact" class="contact page">
+
+      <h1 class="section-heading">Contact</h1>
+      <h4 class="section-sub-heading">Get in Touch</h4>
+
+      <div class="contact-info">
+
+        <div class="info-box">
+          <ion-icon name="call-outline"></ion-icon>
+          <p>6392854273</p>
+        </div>
+
+        <div class="info-box">
+          <ion-icon name="location-outline"></ion-icon>
+          <p>Lucknow , Uttar Pradesh</p>
+        </div>
+
+        <div class="info-box">
+          <ion-icon name="mail-outline"></ion-icon>
+          <p>akash6432@gmail.com</p>
+        </div>
+
+        <div class="info-box">
+          <ion-icon name="checkmark-circle-outline"></ion-icon>
+          <p>Hire Available</p>
+        </div>
+
+      </div>
+
+
+      <div class="contact-form">
+
+        <form method="post" action="{% url 'index' %}">
+            {% csrf_token %}
+          <div class="form-grid">
+            <div class="grid-left">
+              <input type="text" required placeholder="Full Name" name="name">
+              <input type="email" required placeholder="Email Address" name="email">
+              <input type="number" required placeholder="contact" name="contact" inputmode="numeric"
+            pattern="[0-9]{10}"
+            maxlength="10"
+            minlength="10"
+            oninput="this.value = this.value.replace(/\D/g, '').slice(0,10)">
+              <input type="text" required placeholder="Subject" name="subject">
+            </div>
+
+            <div class="grid-right">
+              <textarea placeholder="Message" name="message"></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+
+      </div>
+
+    </section>
+
+  </div>
+
+
+
+  <!-- Custom JS Link -->
+  <script src="{% static 'main.js' %}"></script>
+  <script src="{% static 'sweetalert2.all.min.js' %}"></script>
+
+  <!-- ionicon CDN -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+ 
+</body>
+
+</html>

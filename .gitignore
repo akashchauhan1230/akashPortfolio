@@ -1,0 +1,277 @@
+# Django
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+/media
+/staticfiles
+/static_root
+
+# Environment Variables & Credentials
+.env
+.env.local
+.env.*.local
+.env.production.local
+.venv
+env/
+venv/
+ENV/
+.python-version
+
+# Django Secret Key & Configuration
+SECRET_KEY
+settings/local.py
+*.key
+*.pem
+
+# API Keys & Credentials
+api_keys.py
+credentials.py
+secrets.py
+config/secrets.py
+.aws/
+.azure/
+.gcp/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+*.sql
+
+# Backup Files
+*.bak
+*.backup
+*.tmp
+
+# IDE & Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.sublime-project
+.sublime-workspace
+*.iml
+.project
+.pydevproject
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# Python
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Testing
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+.hypothesis/
+htmlcov/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# IPython
+profile_default/
+ipython_config.py
+
+# Node (if using npm/Playwright tests)
+node_modules/
+npm-debug.log
+yarn-error.log
+.npm
+
+# OS Files
+Thumbs.db
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Temporary Files
+*.temp
+*.tmp
+*.bak
+*~
+
+# Local Development
+/venv
+/env
+/.venv
+.local
+.env
+
+# Logs
+logs/
+*.log
+
+# Runtime data
+pids/
+*.pid
+*.seed
+
+# Compiled Files
+*.class
+*.pyc
+*.o
+*.so
+
+# Folders
+node_modules/
+.venv/
+venv/
+env/
+ENV/
+
+# IDEs
+.vscode
+.idea
+*.sublime-project
+*.sublime-workspace
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Django Migrations (optional - keep or remove based on project needs)
+# migrations/
+
+# Local Settings
+local_settings.py
+settings_local.py
+
+# AWS Credentials
+~/.aws/credentials
+~/.aws/config
+
+# Google Cloud
+google-cloud-key.json
+*.json
+service-account-key.json
+
+# Azure
+.azure/
+
+# SendGrid & Email
+sendgrid.env
+
+# SMS Credentials (like BulkSMS in your code)
+*.sms_config
+sms_credentials.py
+
+# Contact Form Credentials
+contact_api_keys.py
+
+# Media & Static (generated)
+/media/*
+!/media/.gitkeep
+/staticfiles/*
+!/staticfiles/.gitkeep
+
+# Database Backups
+*.dump
+*.sql
+*.backup
+
+# Virtual Environments (multiple names)
+.env
+.env.local
+.env.*.local
+.venv/
+env/
+venv/
+ENV/
+.Python
+
+# IDE Generated Files
+.vscode/settings.json
+.idea/workspace.xml
+.idea/tasks.xml
+
+# Temporary Directories
+/tmp/
+/temp/
+/cache/
+
+# Build Output
+dist/
+build/
+*.egg-info/
+
+# Byte-compiled Python
+*.py[cod]
+__pycache__/
+
+# Type Checking
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pylint
+.pylintrc
+.pylint.d/
+
+# Rope
+.ropeproject/
+
+# Sphinx
+docs/_build/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+
+# Pytest
+.pytest_cache/
+
+# Django
+*.log
+db.sqlite3-journal
+
+# Environment specific
+.envrc
+
+# Keep the following important files/folders:
+# !.gitkeep  - to keep empty directories
+# !/requirements.txt  - keep dependency list
+# !/README.md  - keep documentation
+# !/manage.py  - keep Django management script
