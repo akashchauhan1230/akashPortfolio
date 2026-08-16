@@ -5,10 +5,16 @@ let tick = document.getElementById('tick');
 let cross = document.getElementById('cross');
 var c = 1;
 
+function updateSidebarState(isOpen) {
+  sideBar.classList.toggle('active', isOpen);
+  cross.style.display = isOpen ? 'inline' : 'none';
+  tick.style.display = isOpen ? 'none' : 'inline';
+  c = isOpen ? 0 : 1;
+}
+
 // page navigation variables
 const navItemLinks = document.querySelectorAll('.nav li a');
 const pages = document.querySelectorAll('.page');
-
 
 // variables for filtering
 const filterBtn = document.querySelectorAll('.filter-item');
@@ -16,20 +22,7 @@ const itemCategory = document.querySelectorAll('.item-category');
 
 // toggling sidebar in mobile
 menuToggler.addEventListener('click', function(){
-  if(c==1){
-    sideBar.classList.toggle('active');
-    cross.style.display = "inline";
-    tick.style.display = "none";
-    c = 0;
-    
-  }else{
-    sideBar.classList.toggle('active');
-    cross.style.display = "none";
-    tick.style.display = "inline";
-    c=1;
-    
-  }
-
+  updateSidebarState(c === 1);
 });
 
 
@@ -67,6 +60,9 @@ for (let i = 0; i < navItemLinks.length; i++) {
       const pageId = href.substring(1); // Remove the # character
       navigateToPage(pageId);
       window.location.hash = href; // Update browser URL
+      if (window.innerWidth <= 1024) {
+        updateSidebarState(false);
+      }
     }
   });
 }
