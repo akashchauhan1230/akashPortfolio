@@ -31,19 +31,29 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-default-key-change-in-prod
 # Accept common truthy values from .env so local CSS/JS/static files work correctly.
 DEBUG = os.getenv('DEBUG', 'True').strip().lower() in ('1', 'true', 'yes', 'on')
 
-ALLOWED_HOSTS = [
-    host.strip() for host in os.getenv(
-        'ALLOWED_HOSTS',
-        'localhost,127.0.0.1,*.localhost,*.vercel.app'
-    ).split(',') if host.strip()
-]
+# ALLOWED_HOSTS configuration
+allowed_hosts_env = os.getenv('ALLOWED_HOSTS', '')
+if allowed_hosts_env:
+    ALLOWED_HOSTS = [h.strip() for h in allowed_hosts_env.split(',') if h.strip()]
+else:
+    ALLOWED_HOSTS = ['*']
 
-CSRF_TRUSTED_ORIGINS = [
-    origin.strip() for origin in os.getenv(
-        'CSRF_TRUSTED_ORIGINS',
-        'http://localhost:8000,http://127.0.0.1:8000,https://*.vercel.app'
-    ).split(',') if origin.strip()
-]
+# CSRF_TRUSTED_ORIGINS configuration (ensuring https:// and http:// schemes on all domains)
+csrf_origins_env = os.getenv(
+    'CSRF_TRUSTED_ORIGINS',
+    'http://localhost:8000,http://127.0.0.1:8000,https://*.vercel.app,https://*.onrender.com,https://*.pythonanywhere.com,https://*.railway.app,https://*.herokuapp.com'
+)
+CSRF_TRUSTED_ORIGINS = []
+for origin in csrf_origins_env.split(','):
+    origin = origin.strip()
+    if not origin:
+        continue
+    if not origin.startswith(('http://', 'https://')):
+        CSRF_TRUSTED_ORIGINS.append(f'https://{origin}')
+        CSRF_TRUSTED_ORIGINS.append(f'http://{origin}')
+    else:
+        CSRF_TRUSTED_ORIGINS.append(origin)
+
 
 
 # Application definition

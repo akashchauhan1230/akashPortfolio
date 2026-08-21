@@ -18,8 +18,10 @@
   <link
     href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
     rel="stylesheet" />
-    <!-- Font awesome link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Font awesome link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -34,9 +36,11 @@
         <h1 class="brand-name">Akash Chauhan</h1>
       </div>
 
- <!-- <ion-icon name="menu-outline" class="menu-toggler"></ion-icon> -->
-  <div class="menu-toggler" style="display:flex; align-items: center; justify-content: center;"  name="menu-outline"><i class="fa-solid fa-bars" id="tick"></i>
-  <i class="fa-solid fa-xmark" id="cross" style="display: none;"></i></div>
+      <!-- <ion-icon name="menu-outline" class="menu-toggler"></ion-icon> -->
+      <div class="menu-toggler" style="display:flex; align-items: center; justify-content: center;" name="menu-outline">
+        <i class="fa-solid fa-bars" id="tick"></i>
+        <i class="fa-solid fa-xmark" id="cross" style="display: none;"></i>
+      </div>
     </nav>
 
 
@@ -81,19 +85,11 @@
 
     <!-- about section structure -->
     <section id="about" class="about page active">
-{% if messages %}
-        {% for m in messages %}
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            {{ m }}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
 
-        {% endfor %}
-        {% endif %}
       <!-- about section hero structure -->
       <div class="hero">
         <div class="hero-img-bx">
-          <img  src="{% static 'images/akashprofile.jpeg' %}" alt="">
+          <img src="{% static 'images/akashprofile.jpeg' %}" alt="">
         </div>
 
         <div class="hero-content">
@@ -102,7 +98,8 @@
             <h1 class="name">Akash</h1>
             <div class="desc">
               <p>I'm a passionate web developer specializing in creating modern, responsive, and user-friendly websites.
-                With expertise in Python,Django,REST API,SQL, HTML, CSS, and JavaScript, I craft seamless web experiences that bring ideas to life.
+                With expertise in Python,Django,REST API,SQL, HTML, CSS, and JavaScript, I craft seamless web
+                experiences that bring ideas to life.
               </p>
 
               <p>Whether you're looking for a custom-built website or want to enhance your existing platform, I'm here
@@ -129,7 +126,9 @@
               </div>
               <div class="item-wrapper">
                 <h3>Frontend Developer</h3>
-                <p>As a frontend developer, I bring designs to life by crafting visually appealing and user-friendly interfaces. With a passion for creating seamless user experiences, I focus on writing clean, efficient, and well-documented code.</p>
+                <p>As a frontend developer, I bring designs to life by crafting visually appealing and user-friendly
+                  interfaces. With a passion for creating seamless user experiences, I focus on writing clean,
+                  efficient, and well-documented code.</p>
               </div>
             </div>
 
@@ -139,7 +138,10 @@
               </div>
               <div class="item-wrapper">
                 <h3>Backend Developer</h3>
-                <p>As a backend developer, I focus on building robust, scalable, and efficient server-side solutions that power applications and drive business results. With a strong foundation in programming languages and technologies, I design and implement backend systems that are secure, reliable, and high-performing.</p>
+                <p>As a backend developer, I focus on building robust, scalable, and efficient server-side solutions
+                  that power applications and drive business results. With a strong foundation in programming languages
+                  and technologies, I design and implement backend systems that are secure, reliable, and
+                  high-performing.</p>
               </div>
             </div>
 
@@ -149,7 +151,9 @@
               </div>
               <div class="item-wrapper">
                 <h3>Web Designer</h3>
-                <p>As a web designer, I craft visually appealing and user-friendly websites that effectively communicate a brand's message and values. With a passion for design and a keen eye for detail, I create websites that are both aesthetically pleasing and functional.</p>
+                <p>As a web designer, I craft visually appealing and user-friendly websites that effectively communicate
+                  a brand's message and values. With a passion for design and a keen eye for detail, I create websites
+                  that are both aesthetically pleasing and functional.</p>
               </div>
             </div>
 
@@ -159,7 +163,9 @@
               </div>
               <div class="item-wrapper">
                 <h3>Full Stack Web Developer</h3>
-                <p>As a full stack developer, I have expertise in both frontend and backend development, allowing me to handle all aspects of web development. With a passion for building robust, scalable, and efficient web applications, I work on both the client-side and server-side to deliver high-quality solutions.</p>
+                <p>As a full stack developer, I have expertise in both frontend and backend development, allowing me to
+                  handle all aspects of web development. With a passion for building robust, scalable, and efficient web
+                  applications, I work on both the client-side and server-side to deliver high-quality solutions.</p>
               </div>
             </div>
           </div>
@@ -197,7 +203,8 @@
               <h4 class="year">2020</h4>
               <h4 class="edu-name">Intermediate</h4>
               <p class="company">SMT AMARI DEVI I C Chhattarpur Kushahal Azamgarh</p>
-              <p class="edu-desc">I'm studying physics, chemistry, and mathematics, which are essential for understanding the natural world and developing problem-solving skills</p>
+              <p class="edu-desc">I'm studying physics, chemistry, and mathematics, which are essential for
+                understanding the natural world and developing problem-solving skills</p>
 
               <div class="divider"></div>
             </div>
@@ -207,7 +214,10 @@
               <h4 class="edu-name">Bacholor Of Technology</h4>
               <p class="company">Rameshwaram Institute Of Technology & Management</p>
               <p class="edu-desc">
-As a B.Tech CSE student, I've gained a strong foundation in computer science and engineering principles, including programming, algorithms, data structures, computer architecture, and software engineering. This degree has equipped me with the knowledge and skills to design, develop, and deploy software systems and applications.</p>
+                As a B.Tech CSE student, I've gained a strong foundation in computer science and engineering principles,
+                including programming, algorithms, data structures, computer architecture, and software engineering.
+                This degree has equipped me with the knowledge and skills to design, develop, and deploy software
+                systems and applications.</p>
 
               <div class="divider"></div>
             </div>
@@ -228,7 +238,10 @@ As a B.Tech CSE student, I've gained a strong foundation in computer science and
               <h4 class="year">2025</h4>
               <h4 class="exp-name">SmartBuildHub</h4>
               <p class="company">Softpro India</p>
-              <p class="exp-desc">SmartBuild Hub is a Django-based construction platform connecting clients with contractors. Clients can post projects, receive contractor bids, compare prices, and select contractors, while contractors manage projects and update daily progress. Built using Python, Django, Bootstrap, JavaScript, HTML, CSS, and SQLite.</p>
+              <p class="exp-desc">SmartBuild Hub is a Django-based construction platform connecting clients with
+                contractors. Clients can post projects, receive contractor bids, compare prices, and select contractors,
+                while contractors manage projects and update daily progress. Built using Python, Django, Bootstrap,
+                JavaScript, HTML, CSS, and SQLite.</p>
 
               <div class="divider"></div>
             </div>
@@ -237,7 +250,8 @@ As a B.Tech CSE student, I've gained a strong foundation in computer science and
               <h4 class="year">2025</h4>
               <h4 class="exp-name">Online Book Store</h4>
               <p class="company">Softpro India</p>
-              <p class="exp-desc">The Online Book Store System is a comprehensive digital platform designed to transform the conventional book-selling experience into a streamlined, accessible, and user-friendly process.</p>
+              <p class="exp-desc">The Online Book Store System is a comprehensive digital platform designed to transform
+                the conventional book-selling experience into a streamlined, accessible, and user-friendly process.</p>
 
               <div class="divider"></div>
             </div>
@@ -248,7 +262,7 @@ As a B.Tech CSE student, I've gained a strong foundation in computer science and
               <p class="company">Rameshwaram Institute of Technology & Management</p>
               <p class="exp-desc">Our projects motive is that new visitors easily can navigate the complex campus like
                 Hospitals, Universities and other government organizations etc.
-</p>
+              </p>
 
               <div class="divider"></div>
             </div>
@@ -276,7 +290,7 @@ As a B.Tech CSE student, I've gained a strong foundation in computer science and
               <div class="progress" style="width: 95%"></div>
             </div>
 
-            
+
 
             {% comment %} <div class="progress-detail">
               <div class="progress-name">Logo Design</div>
@@ -358,7 +372,7 @@ As a B.Tech CSE student, I've gained a strong foundation in computer science and
 
       </div>
 
-      <a href="{% static 'images/Akash Chauhan.pdf' %}" download  class="btn-primary">Download CV</a>
+      <a href="{% static 'images/Akash Chauhan.pdf' %}" download class="btn-primary">Download CV</a>
 
 
     </section>
@@ -426,7 +440,8 @@ As a B.Tech CSE student, I've gained a strong foundation in computer science and
           <div class="blog-category">Frontend Development</div>
           <div class="blog-info">
             <p class="publish-date">02 Mar 2025</p>
-            <a href="#" class="blog-title">I completed online course 'Introduction to Frontend Development' From Simplilearn</a>
+            <a href="#" class="blog-title">I completed online course 'Introduction to Frontend Development' From
+              Simplilearn</a>
           </div>
         </div>
 
@@ -448,7 +463,8 @@ As a B.Tech CSE student, I've gained a strong foundation in computer science and
           <div class="blog-category">Python with Django</div>
           <div class="blog-info">
             <p class="publish-date">06 May 2025</p>
-            <a href="#" class="blog-title"> I have done Industrial Training on 'Python with Djnago' from Softpro India</a>
+            <a href="#" class="blog-title"> I have done Industrial Training on 'Python with Djnago' from Softpro
+              India</a>
           </div>
         </div>
 
@@ -463,7 +479,7 @@ As a B.Tech CSE student, I've gained a strong foundation in computer science and
           </div>
         </div>
 
-  
+
     </section>
 
     <!-- contact section structure -->
@@ -481,12 +497,12 @@ As a B.Tech CSE student, I've gained a strong foundation in computer science and
 
         <div class="info-box">
           <ion-icon name="location-outline"></ion-icon>
-          <p>Lucknow , Uttar Pradesh</p>
+          <p>Noida , Uttar Pradesh</p>
         </div>
 
         <div class="info-box">
           <ion-icon name="mail-outline"></ion-icon>
-          <p>akash6432@gmail.com</p>
+          <p>akashchauhan4273@gmail.com</p>
         </div>
 
         <div class="info-box">
@@ -500,16 +516,13 @@ As a B.Tech CSE student, I've gained a strong foundation in computer science and
       <div class="contact-form">
 
         <form method="post" action="{% url 'index' %}">
-            {% csrf_token %}
+          {% csrf_token %}
           <div class="form-grid">
             <div class="grid-left">
               <input type="text" required placeholder="Full Name" name="name">
               <input type="email" required placeholder="Email Address" name="email">
-              <input type="number" required placeholder="contact" name="contact" inputmode="numeric"
-            pattern="[0-9]{10}"
-            maxlength="10"
-            minlength="10"
-            oninput="this.value = this.value.replace(/\D/g, '').slice(0,10)">
+              <input type="number" required placeholder="contact" name="contact" inputmode="numeric" pattern="[0-9]{10}"
+                maxlength="10" minlength="10" oninput="this.value = this.value.replace(/\D/g, '').slice(0,10)">
               <input type="text" required placeholder="Subject" name="subject">
             </div>
 
@@ -531,11 +544,38 @@ As a B.Tech CSE student, I've gained a strong foundation in computer science and
   <!-- Custom JS Link -->
   <script src="{% static 'main.js' %}"></script>
   <script src="{% static 'sweetalert2.all.min.js' %}"></script>
+  {% if messages %}
+  <div id="django-messages" style="display: none;">
+    {% for m in messages %}
+    <div class="django-message" data-tags="{{ m.tags }}" data-text="{{ m }}"></div>
+    {% endfor %}
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var messageElements = document.querySelectorAll('#django-messages .django-message');
+      messageElements.forEach(function (el) {
+        var tags = el.getAttribute('data-tags') || '';
+        var text = el.getAttribute('data-text') || '';
+        var isError = tags.indexOf('error') !== -1;
+        var isWarning = tags.indexOf('warning') !== -1;
+        
+        Swal.fire({
+          title: isError ? 'Error' : (isWarning ? 'Notice' : 'Thank You!'),
+          text: text,
+          icon: isError ? 'error' : (isWarning ? 'warning' : 'success'),
+          background: '#1e293b',
+          color: '#ffffff',
+          confirmButtonColor: '#ffb400'
+        });
+      });
+    });
+  </script>
+  {% endif %}
 
   <!-- ionicon CDN -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
- 
+
 </body>
 
 </html>
