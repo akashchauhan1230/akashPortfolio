@@ -704,6 +704,11 @@ img {
 /* Responsive for 1024px */
 
 @media screen and (max-width: 1024px) {
+
+  .hero-img-bx img {
+    margin-top: 45px;
+  }
+
   /* mobile navbar style */
   .nav-mobile {
     display: flex;
@@ -758,6 +763,10 @@ img {
 /* Responsive for 768px */
 
 @media screen and (max-width: 768px) {
+ .hero-img-bx img {
+    margin-top: 42px;
+  }
+
   /* about section hero */
 
   .hero {
@@ -844,6 +853,9 @@ img {
 /* Responsive for 400px */
 
 @media screen and (max-width: 400px) {
+   .hero-img-bx img {
+    margin-top: 39px;
+  }
   .hero-content .name {
     font-size: 40px;
   }
