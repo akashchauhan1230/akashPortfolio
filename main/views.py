@@ -1,8 +1,11 @@
 import os
+# pyrefly: ignore [missing-import]
 from django.shortcuts import render, redirect
+# pyrefly: ignore [missing-import]
 from django.contrib import messages
 from .models import Contact
 import requests
+# pyrefly: ignore [missing-import]
 from dotenv import load_dotenv
 
 # Load environment variables from .env file
