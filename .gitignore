@@ -185,6 +185,9 @@ settings_local.py
 # Google Cloud
 google-cloud-key.json
 *.json
+!vercel.json
+!package.json
+!tsconfig.json
 service-account-key.json
 
 # Azure
