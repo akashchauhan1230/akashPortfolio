@@ -206,8 +206,6 @@ contact_api_keys.py
 # Media & Static (generated)
 /media/*
 !/media/.gitkeep
-/staticfiles/*
-!/staticfiles/.gitkeep
 
 # Database Backups
 *.dump
