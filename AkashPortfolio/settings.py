@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 import os
+# pyrefly: ignore [missing-import]
 from dotenv import load_dotenv
 
 # Load environment variables from .env file
@@ -34,9 +35,25 @@ DEBUG = os.getenv('DEBUG', 'True').strip().lower() in ('1', 'true', 'yes', 'on')
 # ALLOWED_HOSTS configuration
 allowed_hosts_env = os.getenv('ALLOWED_HOSTS', '')
 if allowed_hosts_env:
-    ALLOWED_HOSTS = [h.strip() for h in allowed_hosts_env.split(',') if h.strip()]
+    raw_hosts = [h.strip() for h in allowed_hosts_env.split(',') if h.strip()]
+    ALLOWED_HOSTS = []
+    for host in raw_hosts:
+        # Django uses '.example.com' for subdomain wildcards; convert '*.example.com' if provided
+        if host.startswith('*.'):
+            host = '.' + host[2:]
+        ALLOWED_HOSTS.append(host)
 else:
     ALLOWED_HOSTS = ['*']
+
+# Always allow Vercel domains and local dev hosts
+if '*' not in ALLOWED_HOSTS:
+    for default_host in ['.vercel.app', '.now.sh', 'localhost', '127.0.0.1']:
+        if default_host not in ALLOWED_HOSTS:
+            ALLOWED_HOSTS.append(default_host)
+            
+vercel_url = os.getenv('VERCEL_URL')
+if vercel_url and vercel_url not in ALLOWED_HOSTS and '*' not in ALLOWED_HOSTS:
+    ALLOWED_HOSTS.append(vercel_url)
 
 # CSRF_TRUSTED_ORIGINS configuration (ensuring https:// and http:// schemes on all domains)
 csrf_origins_env = os.getenv(
