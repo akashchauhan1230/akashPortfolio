@@ -18,7 +18,7 @@ const pages = document.querySelectorAll('.page');
 
 // variables for filtering
 const filterBtn = document.querySelectorAll('.filter-item');
-const itemCategory = document.querySelectorAll('.item-category');
+// Dynamic categories will be queried inside the event listener
 
 // toggling sidebar in mobile
 menuToggler.addEventListener('click', function(){
@@ -99,19 +99,61 @@ for (let i = 0; i < filterBtn.length; i++) {
     this.classList.add('active');
 
     // show item, based on filter button click
-    for (let i = 0; i < itemCategory.length; i++) {
-      const itemCategoryText = itemCategory[i].textContent;
-      console.log(itemCategoryText);
+    const currentCategories = document.querySelectorAll('.item-category');
+    for (let j = 0; j < currentCategories.length; j++) {
+      const itemCategoryText = currentCategories[j].textContent;
       switch (this.textContent) {
         case itemCategoryText:
-          itemCategory[i].parentElement.classList.add('active');
+          currentCategories[j].parentElement.classList.add('active');
           break;
         case 'All':
-          itemCategory[i].parentElement.classList.add('active');
+          currentCategories[j].parentElement.classList.add('active');
           break;
         default:
-          itemCategory[i].parentElement.classList.remove('active');
+          currentCategories[j].parentElement.classList.remove('active');
       }
     }
   });
 }
+
+// Fetch GitHub Projects and Skills
+async function fetchGitHubProjects() {
+  try {
+    const response = await fetch('https://api.github.com/users/akashchauhan1230/repos?sort=updated&per_page=20');
+    const repos = await response.json();
+    const skillsContainer = document.getElementById('github-skills-container');
+    const languagesSet = new Set();
+    
+    repos.forEach(repo => {
+      if (!repo.fork) {
+        // Collect languages for skills
+        if (repo.language) {
+          languagesSet.add(repo.language);
+        }
+      }
+    });
+
+    // Manually add skills extracted from CV to guarantee they show up
+    [
+      'Python', 'JavaScript', 'HTML', 'CSS', 
+      'Django', 'REST API', 'Bootstrap', 'AOS', 'SplideJS', 
+      'MySQL', 'SQLite', 'SQL', 
+      'Visual Studio Code', 'Git', 'PyCharm', 'Jupyter Notebook', 
+      'Windows'
+    ].forEach(skill => languagesSet.add(skill));
+    
+    // Inject Skills
+    if (skillsContainer) {
+      skillsContainer.innerHTML = '';
+      languagesSet.forEach(skill => {
+        skillsContainer.insertAdjacentHTML('beforeend', `<span class="skill-chip">${skill}</span>`);
+      });
+    }
+
+  } catch (error) {
+    console.error('Error fetching GitHub projects:', error);
+  }
+}
+
+// Fetch on load
+window.addEventListener('load', fetchGitHubProjects);

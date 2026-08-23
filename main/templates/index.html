@@ -15,8 +15,7 @@
   <link rel="stylesheet" href="{% static 'style.css' %}">
 
   <!-- Google font link -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet" />
   <!-- Font awesome link -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -226,8 +225,21 @@
 
           </div>
 
+          <div class="coding-skill" style="margin-bottom: 80px;">
+            <h2>Technical Skills</h2>
+            <div id="github-skills-container" class="skill-chips-container">
+              <!-- Skills will be injected here via GitHub API -->
+            </div>
+          </div>
 
-
+          <div class="design-skill" style="margin-bottom: 80px;">
+            <h2>Design Skills</h2>
+            <div class="skill-chips-container">
+              <span class="skill-chip">Web Design</span>
+              <span class="skill-chip">UI/UX Concepts</span>
+              <span class="skill-chip">Responsive Design</span>
+            </div>
+          </div>
 
           <!-- experience structure -->
 
@@ -247,12 +259,32 @@
             </div>
 
             <div class="grid-item">
-              <h4 class="year">2025</h4>
+              <h4 class="year">2026</h4>
               <h4 class="exp-name">Online Book Store</h4>
               <p class="company">Softpro India</p>
               <p class="exp-desc">The Online Book Store System is a comprehensive digital platform designed to transform
                 the conventional book-selling experience into a streamlined, accessible, and user-friendly process.</p>
 
+              <div class="divider"></div>
+            </div>
+
+
+
+            <div class="grid-item">
+              <h4 class="year">2026</h4>
+              <h4 class="exp-name">Hirehub</h4>
+              <p class="company">Personal Project</p>
+              <p class="exp-desc">A comprehensive platform connecting job seekers with employers, featuring advanced
+                search filters and a streamlined application process.</p>
+              <div class="divider"></div>
+            </div>
+
+            <div class="grid-item">
+              <h4 class="year">2025</h4>
+              <h4 class="exp-name">Disease Prediction System</h4>
+              <p class="company">College Project</p>
+              <p class="exp-desc">A machine learning based system designed to analyze patient symptoms and medical data
+                to accurately predict potential diseases.</p>
               <div class="divider"></div>
             </div>
 
@@ -267,108 +299,10 @@
               <div class="divider"></div>
             </div>
 
-
-
           </div>
 
 
         </div>
-
-
-        <div class="wrapper">
-
-          <!-- design skill structure -->
-
-          <div class="design-skill">
-            <h2>Design Skills</h2>
-
-            <div class="progress-detail">
-              <div class="progress-name">Web Design</div>
-              <div class="progress-percent">95%</div>
-            </div>
-            <div class="progress-bar">
-              <div class="progress" style="width: 95%"></div>
-            </div>
-
-
-
-            {% comment %} <div class="progress-detail">
-              <div class="progress-name">Logo Design</div>
-              <div class="progress-percent">80%</div>
-            </div>
-            <div class="progress-bar">
-              <div class="progress" style="width: 80%"></div>
-            </div>
-
-            <div class="progress-detail">
-              <div class="progress-name">Graphics Design</div>
-              <div class="progress-percent">90%</div>
-            </div>
-            <div class="progress-bar">
-              <div class="progress" style="width: 90%"></div>
-            </div> {% endcomment %}
-
-          </div>
-
-
-          <!-- coding skill structure -->
-
-          <div class="coding-skill">
-            <h2 style="margin-top: 340px;">Technical Skills</h2>
-
-            <div class="progress-detail">
-              <div class="progress-name">Djnago</div>
-              <div class="progress-percent">75%</div>
-            </div>
-            <div class="progress-bar">
-              <div class="progress" style="width: 75%"></div>
-            </div>
-
-            <div class="progress-detail">
-              <div class="progress-name">SQLite</div>
-              <div class="progress-percent">70%</div>
-            </div>
-            <div class="progress-bar">
-              <div class="progress" style="width: 70%"></div>
-            </div>
-
-            <div class="progress-detail">
-              <div class="progress-name">Python</div>
-              <div class="progress-percent">80%</div>
-            </div>
-            <div class="progress-bar">
-              <div class="progress" style="width: 80%"></div>
-            </div>
-
-            <div class="progress-detail">
-              <div class="progress-name">JavaScript</div>
-              <div class="progress-percent">70%</div>
-            </div>
-            <div class="progress-bar">
-              <div class="progress" style="width: 70%"></div>
-            </div>
-
-            <div class="progress-detail">
-              <div class="progress-name">HTML/CSS</div>
-              <div class="progress-percent">95%</div>
-            </div>
-            <div class="progress-bar">
-              <div class="progress" style="width: 95%"></div>
-            </div>
-
-            <div class="progress-detail">
-              <div class="progress-name">Bootstrap</div>
-              <div class="progress-percent">95%</div>
-            </div>
-            <div class="progress-bar">
-              <div class="progress" style="width: 95%"></div>
-            </div>
-
-          </div>
-
-
-        </div>
-
 
       </div>
 
@@ -386,38 +320,72 @@
         <li class="filter-item active">All</li>
         <li class="filter-item">SmartBuildHub</li>
         <li class="filter-item">Online Book Store</li>
+        <li class="filter-item">Hirehub</li>
+        <li class="filter-item">Disease Prediction System</li>
         <li class="filter-item">Campus Navigation System</li>
+
       </ul>
 
 
-      <div class="portfolio-items-group">
+      <div class="portfolio-items-group" id="portfolio-items-container">
 
         <div class="portfolio-item active">
           <img src="{% static 'images/sbh.png' %}" alt="" class="item-img">
-          <h4 class="item-name">SmartBuildHub</h4>
           <div class="item-icon">
-            <ion-icon name="home"></ion-icon>
+            <a href="https://smart-build-hub-navy.vercel.app" target="_blank" style="color: inherit;">
+              <ion-icon name="home"></ion-icon>
+            </a>
           </div>
-          <div class="item-category">SmartBuildHub</div>
+          <div class="item-category"><a href="https://smart-build-hub-navy.vercel.app" target="_blank"
+              style="color: inherit; text-decoration: none;">SmartBuildHub</a></div>
         </div>
 
         <div class="portfolio-item active">
-          <img src="{% static 'images/book.jpg' %}" alt="" class="item-img">
-          <h4 class="item-name">Online Book Store</h4>
+          <img src="{% static 'images/obs.png' %}" alt="" class="item-img">
           <div class="item-icon">
-            <ion-icon name="book"></ion-icon>
+            <a href="https://online-book-store-akash.vercel.app" target="_blank" style="color: inherit;">
+              <ion-icon name="book"></ion-icon>
+            </a>
           </div>
-          <div class="item-category">Online Book Store</div>
+          <div class="item-category"><a href="https://online-book-store-akash.vercel.app" target="_blank"
+              style="color: inherit; text-decoration: none;">Online Book Store</a></div>
+        </div>
+
+
+        <div class="portfolio-item active">
+          <img src="{% static 'images/hirehub.png' %}" alt="" class="item-img">
+          <div class="item-icon">
+            <a href="https://hirehub-akash-rho.vercel.app" target="_blank" style="color: inherit;">
+              <ion-icon name="briefcase"></ion-icon>
+            </a>
+          </div>
+          <div class="item-category"><a href="https://hirehub-akash-rho.vercel.app" target="_blank"
+              style="color: inherit; text-decoration: none;">Hirehub</a></div>
+        </div>
+
+        <div class="portfolio-item active">
+          <img src="{% static 'images/dps.png' %}" alt="" class="item-img">
+          <div class="item-icon">
+            <a href="#" target="_blank" style="color: inherit;">
+              <ion-icon name="videocam"></ion-icon>
+            </a>
+          </div>
+          <div class="item-category"><a href="#" target="_blank" style="color: inherit; text-decoration: none;">Disease
+              Prediction System</a></div>
         </div>
 
         <div class="portfolio-item active">
           <img src="{% static 'images/sns.gif' %}" alt="" class="item-img">
-          <h4 class="item-name">Campus Navigation System</h4>
           <div class="item-icon">
-            <ion-icon name="videocam"></ion-icon>
+            <a href="#" target="_blank" style="color: inherit;">
+              <ion-icon name="videocam"></ion-icon>
+            </a>
           </div>
-          <div class="item-category">Campus Navigation System</div>
+          <div class="item-category"><a href="#" target="_blank" style="color: inherit; text-decoration: none;">Campus
+              Navigation System</a></div>
         </div>
+
+
 
 
 
